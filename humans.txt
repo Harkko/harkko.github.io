@@ -1,0 +1,28 @@
+/* The human responsible & colophon */
+/* humanstxt.org */
+
+
+************
+***_-----***
+**/\     \**
+*|/ \__-\ |*
+*(  0  0  )*
+**\  __  /**
+****----****
+************
+
+/* TEAM */
+    v- Me! -v
+    Designed and hand crafted by Hannu Aarniala.
+    Site: hannu.aarniala@iki.fi
+    Twitter: @haarniala
+    Location: Helsinki, Finland
+
+/* THANKS */
+    Name: Jarno Rantanen, @jareware, 
+
+/* SITE */
+    Last update: YYYY/MM/DD
+    Standards: HTML5, CSS3, JS
+    Components: Modernizr, jQuery, FitText.js ().
+    Software: Sublime Text () with Emmet ()

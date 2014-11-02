@@ -1,0 +1,80 @@
+.icon-dribbble {
+	background-image: url('png/dribbble.png');
+	background-repeat: no-repeat;
+}
+.icon-dribbble:hover {
+	background-image: url('png/dribbble-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-flickr {
+	background-image: url('png/flickr.png');
+	background-repeat: no-repeat;
+}
+.icon-flickr:hover {
+	background-image: url('png/flickr-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-gimmebar {
+	background-image: url('png/gimmebar.png');
+	background-repeat: no-repeat;
+}
+.icon-gimmebar:hover {
+	background-image: url('png/gimmebar-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-github {
+	background-image: url('png/github.png');
+	background-repeat: no-repeat;
+}
+.icon-github:hover {
+	background-image: url('png/github-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-instagram {
+	background-image: url('png/instagram.png');
+	background-repeat: no-repeat;
+}
+.icon-instagram:hover {
+	background-image: url('png/instagram-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-lastfm {
+	background-image: url('png/lastfm.png');
+	background-repeat: no-repeat;
+}
+.icon-lastfm:hover {
+	background-image: url('png/lastfm-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-linkedin {
+	background-image: url('png/linkedin.png');
+	background-repeat: no-repeat;
+}
+.icon-linkedin:hover {
+	background-image: url('png/linkedin-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-psnu {
+	background-image: url('png/psnu.png');
+	background-repeat: no-repeat;
+}
+.icon-psnu:hover {
+	background-image: url('png/psnu-hover.png');
+	background-repeat: no-repeat;
+}
+
+.icon-twitter {
+	background-image: url('png/twitter.png');
+	background-repeat: no-repeat;
+}
+.icon-twitter:hover {
+	background-image: url('png/twitter-hover.png');
+	background-repeat: no-repeat;
+}
