@@ -1,3 +1,5 @@
-/Users/Harkko/Sites/hannuaarniala.com/config.codekit
-/Users/Harkko/Sites/hannuaarniala.com/hannuaarniala.sublime-project
-/Users/Harkko/Sites/hannuaarniala.com/hannuaarniala.sublime-workspace
+config.codekit
+hannuaarniala.sublime-project
+hannuaarniala.sublime-workspace
+.codekit-cache
+.DS_Store
