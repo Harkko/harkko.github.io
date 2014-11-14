@@ -119,22 +119,32 @@ h1 {
   text-indent: -.1em;
   /* (end) needed for FitText.js*/
 
-  margin-bottom: 10px;
-  font-size: 104px; /* 104px */
-  line-height: 89px; /* 89px */
+  /* margin-bottom: 10px; */
+  font-size: 4.06em; /* 104px */
+  /* line-height: 3.47em; /* 89px */
 }
 
 h2 {
-  margin-bottom: 10px;
-  font-size: 95px; /* 95px */
-  line-height: 80px; /* 80px */
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-indent: -.1em;
+
+  /* margin-bottom: 10px; */
+  font-size: 3.71em; /* 95px */
+  /* line-height: 3.12em; /* 80px */
   /* color: #595959; /* lighter color */
 }
 
 h3 {
-  padding-top: 1px;
-  font-size: 67px; /* 67px */
-  line-height: 63px; /* 63px */
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-indent: -.1em;
+
+  /* padding-top: 1px; */
+  font-size: 2.61em; /* 67px */
+  /* line-height: 2.46em; /* 63px */
 }
 
 /* ===== Modernizr generic sans-serif fallback ===== */

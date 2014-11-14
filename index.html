@@ -65,11 +65,11 @@
     </div>
 
   <!-- Header text and nav links section -->
-    <h1 id="headline">Hannu Aarniala</h1>
-    <h2>graphic designer</h2>
+    <h1 id="h1-name">Hannu Aarniala</h1>
+    <h2 id="h2-title">graphic designer</h2>
 
     <nav>
-      <h3>
+      <h3 id="h3-nav">
         <ul class="main-nav">
           <li><a href="http://cargocollective.com/hannu">Work</a></li>|
           <li><a href="http://cargocollective.com/hannu/About">About</a></li>|
@@ -116,7 +116,9 @@
   <!-- Fitting text to the body device-agnostically with FitText.js -->
   <script src="_/js/fittext.js"></script>
   <script type="text/javascript">
-    fitText(document.getElementById('headline'), 0.545)
+    fitText(document.getElementById('h1-name'), 0.545)
+    fitText(document.getElementById('h2-title'), 0.59)
+    fitText(document.getElementById('h3-nav'), 0.84)
   </script>
 
 </body>
