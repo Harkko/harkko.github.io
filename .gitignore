@@ -3,3 +3,5 @@ hannuaarniala.sublime-project
 hannuaarniala.sublime-workspace
 .codekit-cache
 .DS_Store
+.BridgeCache
+.BridgeCacheT

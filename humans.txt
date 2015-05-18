@@ -14,15 +14,15 @@
 /* TEAM */
     v- Me! -v
     Designed and hand crafted by Hannu Aarniala.
-    Site: hannu.aarniala@iki.fi
     Twitter: @haarniala
     Location: Helsinki, Finland
 
 /* THANKS */
-    Name: Jarno Rantanen, @jareware, 
+    Name: Jarno Rantanen, @jareware, for code reviewing and couching
 
 /* SITE */
-    Last update: YYYY/MM/DD
+    Last update: 2015-05-18
     Standards: HTML5, CSS3, JS
-    Components: Modernizr, jQuery, FitText.js ().
-    Software: Sublime Text () with Emmet ()
+    Components: Modernizr, jQuery, FitText.js (https://github.com/adactio/FitText.js)
+    Software & Tools used: Sublime Text (http://www.sublimetext.com/) with Emmet (http://emmet.io/), Git and The GitHub app for Mac
+    Services: hosted by Github at GitHub Pages. Feel free to report issues: https://github.com/Harkko/harkko.github.io
