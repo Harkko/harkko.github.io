@@ -34,15 +34,6 @@
 	background-repeat: no-repeat;
 }
 
-.icon-instagram {
-	background-image: url('png/instagram.png');
-	background-repeat: no-repeat;
-}
-.icon-instagram:hover {
-	background-image: url('png/instagram-hover.png');
-	background-repeat: no-repeat;
-}
-
 .icon-lastfm {
 	background-image: url('png/lastfm.png');
 	background-repeat: no-repeat;
