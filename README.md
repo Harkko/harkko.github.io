@@ -1,5 +1,5 @@
 # hannuaarniala.com (GitHub Page)
-Personal site and contact page of a Helsinki based graphic designer Hannu Aarniala (@haarniala).
+Personal site and contact page of a Helsinki based graphic designer Hannu Aarniala ([@haarniala](https://twitter.com/haarniala)).
 
 ## Site info
 - **Standards:** HTML5, CSS3, JS
