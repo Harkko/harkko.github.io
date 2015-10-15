@@ -16,6 +16,7 @@
  * 4. HEADER SVG AVATAR - an SVG self-portrait with a fallback
  * 5. MAIN NAV - <h1>-text navigation
  * 6. SOCIAL MEDIA ICONS - links to my profiles and social media
+ * 7. OFF-CANVAS "ABOUT" -SECTION - The "About" section with off-canvas transform
 */
 
 
@@ -263,4 +264,59 @@ h3 {
 .icon:hover, .icon:focus, .icon:active { 
   cursor: pointer;
   transform: scale(1.2);
+}
+
+
+/* ==========================================================================
+   7. OFF-CANVAS "ABOUT" -SECTION
+   ========================================================================== */
+
+.site-wrapper {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  overflow: hidden;
+  
+} 
+
+.site-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+       -0-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .3s ease all;
+     -moz-transition: .3s ease all;
+       -0-transition: .3s ease all;
+          transition: .3s ease all;
+  /* padding: 5% 0; /* Temp: Just spacing. */
+}
+
+/* Animation to show the about page */
+.hide-main .site-canvas {
+  -webkit-transform: translateX(300px);
+     -moz-transform: translateX(300px);
+       -0-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+/* About-section content styling */
+.about-section {
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  background: #428bca;
+  padding: 15px;
+}
+
+.about-section p {
+
+}
+
+.about-section img {
+
 }

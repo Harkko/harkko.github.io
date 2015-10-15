@@ -44,6 +44,9 @@
   <meta property="og:image" content="/apple-touch-icon-precomposed.png"/>
   <meta property="og:site_name" content="Graphic designer Hannu Aarniala"/>
 
+  <!-- Include jQuery via Google's hosted library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
   <!-- Social media icons with Grunticon -->
   <script>
   /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -55,13 +58,18 @@
 
 <body>
 
+<div class="site-wrapper">
+<div class="site-canvas">
+
   <header id="header">
     
-    <div class="svg-container">
+    <div class="svg-container"> 
+      <a href="#" class="toggle-about">
       <object height="100%" width="100%" id="avatar" type="image/svg+xml" data="_/img/avatar.svg">
         <!-- fallback image in this div by CSS -->
         <div></div>
       </object>
+      </a>
     </div>
 
   <!-- Header text and nav links section -->
@@ -94,6 +102,16 @@
     </ul>
   </section>
 
+  <!-- hidden "About" page -->
+  <section class="about-section">
+    <p>TEST</p>
+  </section>
+
+<!-- .site-canvas -->
+</div>
+<!-- .site-wrapper> -->
+</div>
+
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -105,13 +123,16 @@
   ga('send', 'pageview');
 </script>
 
-  <!-- Fitting text to the body device-agnostically with FitText.js -->
-  <script src="_/js/fittext.js"></script>
-  <script type="text/javascript">
-    fitText(document.getElementById('h1-name'), 0.545)
-    fitText(document.getElementById('h2-title'), 0.59)
-    fitText(document.getElementById('h3-nav'), 0.84)
-  </script>
+<!-- Fitting text to the body device-agnostically with FitText.js -->
+<script src="_/js/fittext.js"></script>
+<script type="text/javascript">
+  fitText(document.getElementById('h1-name'), 0.545)
+  fitText(document.getElementById('h2-title'), 0.59)
+  fitText(document.getElementById('h3-nav'), 0.84)
+</script>
+
+<!-- off-canvas about page functionality -->
+<script src="_/js/off-canvas-effects.js"></script>
 
 </body>
 

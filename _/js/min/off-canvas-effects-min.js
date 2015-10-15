@@ -1,0 +1,1 @@
+function toggleAbout(){$(".site-wrapper").hasClass("hide-main")?$(".site-wrapper").removeClass("hide-main"):$(".site-wrapper").addClass("hide-main")}$(function(){$(".toggle-about").click(function(){toggleAbout()})});
