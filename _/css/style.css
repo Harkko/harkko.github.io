@@ -38,18 +38,16 @@
 
 /* html can work as wrapper too: http://camendesign.com/code/developpeurs_sans_frontieres */
 html {
-  height: 100%; /* TODO: not sure if needed */
   font-size: 16px;
   background-color: #fff;
 }
 
 /* Body itself can wrap the content (see above) */ 
 body {
-  width: 100%; /* <-- TODO: Is this really needed? */
   /* max-width: 79.86vh; /* kokosivun versio (omakuvalla)= 95vh; on 600px; */ /* TODO: RWD leiskakokeilu. Tämän määrittely ehkä osaksi SVG-objektia. Mites fallback, png on pienempi? */
   max-width: 600px;
   min-width: 200px;
-  min-height: 100%; /* TODO: Is this really needed? "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
+  min-height: 100%; /* "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -104,13 +102,11 @@ a:hover {
 body {
   font-family: "BebasNeue", Helmet, Freesans, sans-serif;
   font-size: 1.6em;
-  /* line-height: 3.2em; TODO: depracted code, remove! */ 
   color: #333;
   text-align: center;
   text-transform: uppercase; 
 }
 
-/* TODO: change font sizes to em? */
 h1 {
   /* needed for FitText.js */
   display: inline-block;
@@ -142,7 +138,6 @@ h3 {
   text-align: center;
   text-indent: -.1em;
 
-  /* padding-top: 1px; */
   font-size: 2.61em; /* 67px */
   /* line-height: 2.46em; /* 63px */
 }
@@ -207,7 +202,7 @@ h3 {
   display: inline-block;
 }
 
-/* png fallback of the svg header img TODO: how to test? */
+/* png fallback of the svg header img*/
 #avatar div {
   display: block;
   height: auto; /* 600px; */
