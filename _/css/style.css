@@ -36,25 +36,16 @@
 * {
   border: 1px solid red !important;
 }
+*/
 
-/* html can work as wrapper too: http://camendesign.com/code/developpeurs_sans_frontieres */
 html {
   font-size: 16px;
   background-color: #fff;
 }
 
-/* Body itself can wrap the content (see above) */ 
 body {
-  /* max-width: 79.86vh; /* kokosivun versio (omakuvalla)= 95vh; on 600px; */ /* TODO: RWD leiskakokeilu. Tämän määrittely ehkä osaksi SVG-objektia. Mites fallback, png on pienempi? */
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 100%; /* "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  margin: 0px auto; /* centers the content */
-  background-color: #fff;
+  width: 100%;
+  /* background-color: #fff; */
 }
 
 
@@ -116,7 +107,6 @@ h1 {
   text-indent: -.1em;
   /* (end) needed for FitText.js*/
 
-  /* margin-bottom: 10px; */
   font-size: 4.06em; /* 104px */
   /* line-height: 3.47em; /* 89px */
 }
@@ -127,10 +117,8 @@ h2 {
   text-align: center;
   text-indent: -.1em;
 
-  /* margin-bottom: 10px; */
   font-size: 3.71em; /* 95px */
   /* line-height: 3.12em; /* 80px */
-  /* color: #595959; /* lighter color */
 }
 
 h3 {
@@ -157,7 +145,6 @@ h3 {
 .no-fontface h2 {
   padding-top: 3px;
   font-size: 3.375em; /* 54px */
-/*  color: #595959; / lighter color */
 }
 
 .no-fontface h3 {
@@ -274,37 +261,49 @@ h3 {
 .site-wrapper {
   position: relative;
   width: 100%;
-  /* height: 100%; */
-  overflow: hidden;
+  height: 100%;
+
 }
 
 .site-canvas {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 20px;
+
   -webkit-transform: translateX(0);
      -moz-transform: translateX(0);
        -0-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: .6s ease-in-out all;
-     -moz-transition: .6s ease-in-out all;
-       -0-transition: .6s ease-in-out all;
-          transition: .6s ease-in-out all;
+  -webkit-transition: .8s ease-in-out all;
+     -moz-transition: .8s ease-in-out all;
+       -0-transition: .8s ease-in-out all;
+          transition: .8s ease-in-out all;
   /* padding: 5% 0; /* Temp: Just spacing. */
 }
 
 /* Animation to show the about page */
 .hide-main .site-canvas {
-  -webkit-transform: translateX(100%);
-     -moz-transform: translateX(100%);
-       -0-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+       -0-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.site-canvas-inner {
+  /* max-width: 79.86vh; /* kokosivun versio (omakuvalla)= 95vh; on 600px; */ /* TODO: RWD leiskakokeilu. Tämän määrittely ehkä osaksi SVG-objektia. Mites fallback, png on pienempi? */
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 100%; /* "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
+  /* height: 100%; */
+  overflow: hidden;
+  margin: 0px auto; /* centers the content */
 }
 
 /* About-section content styling */
 .about-section {
   top: 0;
-  left: -100%;
+  right: -100%; /* position of the off-canvas content */
   width: 100%;
   height: 100%;
   position: absolute;
