@@ -306,8 +306,12 @@ h3 {
   right: -100%; /* position of the off-canvas content */
   width: 100%;
   height: 100%;
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 100%;
   position: absolute;
-  padding: 15px;
+  overflow: hidden;
+  padding: 20px;
 }
 
 /* "About"-text */
