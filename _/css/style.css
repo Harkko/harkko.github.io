@@ -110,7 +110,7 @@ h1 {
   /* (end) needed for FitText.js*/
 
   font-size: 4.06em; /* 104px */
-  /* line-height: 3.47em; /* 89px */
+  line-height: .9; /* 89px */
 }
 
 h2 {
@@ -120,7 +120,7 @@ h2 {
   text-indent: -.1em;
 
   font-size: 3.71em; /* 95px */
-  /* line-height: 3.12em; /* 80px */
+  line-height: 1; /* 80px */
 }
 
 h3 {
@@ -130,7 +130,7 @@ h3 {
   text-indent: -.1em;
 
   font-size: 2.61em; /* 67px */
-  /* line-height: 2.46em; /* 63px */
+  line-height: 1; /* 63px */
 }
 
 /* ===== Custom text-selection colors ===== */
