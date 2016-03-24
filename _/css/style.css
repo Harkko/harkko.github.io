@@ -24,11 +24,14 @@
    1. LAYOUT
    ========================================================================== */
 
-/* Apply a natural box layout model to all elements */
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+/* Apply a natural box layout model to all elements; Slightly better version from:
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /* for development: see every single box that make up the page */
@@ -45,7 +48,6 @@ html {
 
 body {
   width: 100%;
-  /* background-color: #fff; */
 }
 
 
@@ -78,7 +80,7 @@ a:hover {
    3. TYPOGRAPHY
    ========================================================================== */
 
-/* ===== Primary, '@font-face' -version ===== */
+/* ===== Primary type styling ===== */
 
   @font-face { 
     font-family: "BebasNeue";
@@ -129,30 +131,6 @@ h3 {
 
   font-size: 2.61em; /* 67px */
   /* line-height: 2.46em; /* 63px */
-}
-
-/* ===== Modernizr generic sans-serif fallback ===== */
-
-.no-fontface body {
-  font-family: Helmet, Freesans, sans-serif;
-}
-
-.no-fontface h1 {
-    font-size: 3.75em; /* 60px */
-    line-height: 3.5em; /* 56px */
-}
-
-.no-fontface h2 {
-  padding-top: 3px;
-  font-size: 3.375em; /* 54px */
-}
-
-.no-fontface h3 {
-  font-size: 2.6875em; /* 43px */
-}
-
-.no-fontface h4 {
-  font-size: 2.375em; /* 38px */
 }
 
 /* ===== Custom text-selection colors ===== */
@@ -212,7 +190,6 @@ h3 {
 
 .main-nav li {
   margin-right: 5px;
-
 }
 
 
