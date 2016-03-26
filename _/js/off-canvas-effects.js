@@ -22,8 +22,9 @@ if ($('.site-wrapper').hasClass('hide-main')) {
 //$('.site-wrapper').toggleClass('hide-main');
 }
 
+/* Hide The About-section with the ESC-key */
 $(document).keyup(function(e) {
-if (e.keyCode == 27) {
+if (e.keyCode === 27) {
   if ($('.site-wrapper').hasClass('hide-main')) {
     // Assuming you used the function I made from the demo
     toggleAbout();
