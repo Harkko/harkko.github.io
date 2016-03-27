@@ -241,35 +241,22 @@ h3 {
    ========================================================================= */
 
 .site-wrapper {
-  position: relative;
   width: 100%;
   height: 100%;
 
 }
 
 .site-canvas {
-  position: relative;
   width: 100%;
   height: 100%;
   padding: 20px;
-
-  -webkit-transform: translateX(0);
-     -moz-transform: translateX(0);
-       -0-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: .8s ease-in-out all;
-     -moz-transition: .8s ease-in-out all;
-       -0-transition: .8s ease-in-out all;
-          transition: .8s ease-in-out all;
   /* padding: 5% 0; /* Temp: Just spacing. */
 }
 
-/* Animation to show the about page */
-.hide-main .site-canvas {
-  -webkit-transform: translateX(-100%);
-     -moz-transform: translateX(-100%);
-       -0-transform: translateX(-100%);
-          transform: translateX(-100%);
+/* Reduce main content opacity when about section revealed */
+.opacity-main {
+  opacity: 0.4;
+  transition: .8s ease-in-out all; 
 }
 
 .site-canvas-inner {
@@ -280,23 +267,40 @@ h3 {
   /* height: 100%; */
   overflow: hidden;
   margin: 0px auto; /* centers the content */
+  transition: .8s ease-in-out all; /* needed, otherwise no anim on close */
 }
 
-/* About-section content styling */
+/* ===== About-section layout ===== */
+
 .about-section {
   top: 0;
-  right: -100%; /* position of the off-canvas content */
-  width: 100%;
+  right: -600px; /* position it JUST outside the right edge of the screen */
+  width: 600px;
   height: 100%;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 100%;
-  position: absolute;
-  overflow: hidden;
+  min-width: initial; /* this is just an override for above styles */
+  max-width: initial; /* ^ ditto */
+  
+  /* position the sidebar fixed to the SCREEN, not the parent (for scroll position independence) */
+  position: fixed;
+  
+  /* if there's more stuff in "about", make sure it scrolls independently */
+  overflow: auto;
+  
   padding: 20px;
+
+  /* this is how the sidebar moves */
+  transition: .8s ease-in-out all;
 }
 
-/* "About"-text */
+/* Animation to show the about page */
+.hide-main .site-canvas-inner,
+.hide-main .about-section {
+  /* move BOTH pieces of content left the same amount */
+  transform: translateX(-600px);
+}
+
+/* ===== "About"-section content styling ===== */
+
 .about-section p {
 
 }

@@ -11,22 +11,24 @@ $(function() {
 /* Custom Functions */
 
 function toggleAbout() {
-if ($('.site-wrapper').hasClass('hide-main')) {
+if ($('.site-canvas').hasClass('hide-main')) {
   // Do things on Main page Close
-  $('.site-wrapper').removeClass('hide-main');
+  $('.site-canvas').removeClass('hide-main');
+  $('.site-canvas-inner').removeClass('opacity-main');
 } else {
   // Do things on Main page reveal
-  $('.site-wrapper').addClass('hide-main');
+  $('.site-canvas').addClass('hide-main');
+  // reduce opacity of the main content
+  $('.site-canvas-inner').addClass('opacity-main');
 }
 
 //$('.site-wrapper').toggleClass('hide-main');
 }
 
-/* Hide The About-section with the ESC-key */
+// Hide on ESC-key
 $(document).keyup(function(e) {
 if (e.keyCode === 27) {
-  if ($('.site-wrapper').hasClass('hide-main')) {
-    // Assuming you used the function I made from the demo
+  if ($('.site-canvas').hasClass('hide-main')) {
     toggleAbout();
   }
 } 
