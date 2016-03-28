@@ -241,7 +241,7 @@ h3 {
    ========================================================================= */
 
 /* TODO: 1) reduce DOM complexity, 3 levels really needed? 
- * 2) try to make rwd work w/o media queries. */
+ * 2) Media queries to viewports over 620px -> translateX(-1000px);? */
 
 .site-wrapper {
   width: 100%;
@@ -277,11 +277,11 @@ h3 {
 
 .about-section {
   top: 0;
-  right: -600px; /* position it JUST outside the right edge of the screen */
-  width: 600px;
+  right: -600px; /* -600px; /* position it JUST outside the right edge of the screen */
+  width: 600px; /* 600px; */
   height: 100%;
   min-width: initial; /* this is just an override for above styles */
-  max-width: initial; /* ^ ditto */
+  max-width: 100%; /* needed for section to scale nicely on smaller screens */
   
   /* position the sidebar fixed to the SCREEN, not the parent (for scroll position independence) */
   position: fixed;
@@ -289,7 +289,7 @@ h3 {
   /* if there's more stuff in "about", make sure it scrolls independently */
   overflow: auto;
   
-  padding: 20px;
+  padding: 5%; /* 5% 5% 5% 10%; */
 
   /* this is how the sidebar moves */
   transition: .8s ease-in-out all;
@@ -299,7 +299,7 @@ h3 {
 .hide-main .site-canvas-inner,
 .hide-main .about-section {
   /* move BOTH pieces of content left the same amount */
-  transform: translateX(-600px);
+  transform: translateX(-600px); /* (-600px); */
 }
 
 /* ===== "About"-section content styling ===== */

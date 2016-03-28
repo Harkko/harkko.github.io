@@ -108,7 +108,7 @@
   <!-- hidden "About" page content-->
   <section class="about-section">
     <img/>
-    <h1>At Your Service,</h1>
+    <h1 id="h1-about">At Your Service,</h1>
     <p>TEST</p>
     <img sizes="(min-width: 320px) 50vw, 100vw" srcset="Hannu-200.jpg 200w,
     Apples-400.jpg 400w,
@@ -140,9 +140,10 @@
 <!-- Fitting text to the viewport device-agnostically with FitText.js -->
 <script src="_/js/fittext.js"></script>
 <script type="text/javascript">
-  fitText(document.getElementById('h1-name'), 0.545)
-  fitText(document.getElementById('h2-title'), 0.59)
-  fitText(document.getElementById('h3-nav'), 0.84)
+  fitText(document.getElementById('h1-name'), .545)
+  fitText(document.getElementById('h2-title'), .59)
+  fitText(document.getElementById('h3-nav'), .84)
+  fitText(document.getElementById('h1-about'), .6)
 </script>
 
 <!-- off-canvas 'About'-page functionality -->
