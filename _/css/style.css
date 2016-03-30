@@ -304,10 +304,29 @@ h3 {
 
 /* ===== "About"-section content styling ===== */
 
-.about-section p {
+.about-section h1 {
+  text-align: left;
+  text-indent: 0em;
+}
 
+.about-section p {
+  font-family: "Montserrat", Helmet, Freesans, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-align: left;
+  text-transform: initial;
+  margin-bottom: 1rem;
+}
+
+.about-section a {
+  text-decoration: underline;
 }
 
 .about-section img {
+  width: 100%;
+  min-width: 200px;
+  max-width: 1200px;
+  margin: 20px 0px;
 
 }
