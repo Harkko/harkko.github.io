@@ -1,12 +1,25 @@
 /* On DOM ready */
 
 $(function() {
-  $('.toggle-about').click(function() {
+  $('.toggle-about').click(function(event) {
+    event.stopPropagation();
     // Calling a function in case you want to expand upon this.
     toggleAbout();
   });
-});
 
+  // Eelin lisäämä juttu. Dokumentoi tähän, mitä tekee?
+  $('.main-toggle').click(function() {
+    if ($('.site-canvas').hasClass('hide-main')) {
+      toggleAbout();
+    }
+  });
+
+  $('#about-back-btn').click(function() {
+    if ($('.site-canvas').hasClass('hide-main')) {
+      toggleAbout();
+    }
+  });
+});
 
 /* Custom Functions */
 
