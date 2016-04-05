@@ -60,11 +60,9 @@
 </head>
 
 <body>
+<!-- body acts as a "wrapper" for the main content VS off-canvas "About"-page -->
 
-<!-- wrappers for the off-canvas "About"-page transform-->
-<div class="site-wrapper">
-<div class="site-canvas">
-<div class="site-canvas-inner">
+<div role="main" class="main-content">
 
   <header id="header">
     
@@ -92,7 +90,7 @@
   </header>
 
   <!-- social media icons nav-buttons -->
-  <section class="some-nav">
+  <div class="some-nav">
     <ul class="some-links">
       <li class="icon icon-twitter"><a href="https://twitter.com/haarniala" title="Twitter">Twitter</a></li>
       <li class="icon icon-dribbble"><a href="https://dribbble.com/har" title="Dribbble">dribbble</a></li>
@@ -103,30 +101,25 @@
       <li class="icon icon-lastfm"><a href="http://www.last.fm/user/Harkko" title="Last.fm">last.fm</a></li>
       <li class="icon icon-gimmebar"><a href="https://gimmebar.com/loves/har" title="Gimmebar">gimmebar</a></li>
     </ul>
-  </section>
+  </div>
 
-<!-- .site-canvas-inner end -->
+<!-- .main-content end -->
 </div>
 
 <!-- toggle to reveal/hide main content -->
 <div class="main-toggle"></div>
 
-  <!-- hidden "About" page content-->
-  <section class="about-section">
+<!-- hidden "About" page content-->
+<aside role="sidebar" class="about-section">
     <button id="about-back-btn">&#11013; Back</button>
     <h1 id="h1-about">At Your Service,</h1>
     <img sizes="(min-width: 320px) 50vw, 100vw" srcset="_/img/Hannu-600-retina.jpg 2x"
          src="_/img/Hannu-600.jpg" width="600" alt="Hannu Aarniala" />
-<!-- <img src="small.jpg" 
-    srcset="small.jpg [smallwidth]w, large.jpg [largewidth]w" sizes="100vw" alt="Alt Text" /> -->
+
     <p>A visual design thinker and a problem solver with an extensive experience in print and a passion for great digital products & experiences. I’m a team player who likes to think different and make stuff work with less.</p>
     <p><a href="http://youtu.be/EZNInn5jFRE">I dance</a> the Lindy Hop, suffer from <a href="https://en.wikipedia.org/wiki/Tsundoku">tsundoku</a>, <a href="https://open.spotify.com/user/harkko/playlist/65ZPgCSYvCme2P54FRj4Ut">DJ</a> occasionally, <a href="http://www.last.fm/user/Harkko">listen to</a> a lot of music and try to be The World's Greatest Dad.</p>
-  </section>
+  </aside>
 
-<!-- .site-canvas end -->
-</div>
-<!-- .site-wrapper end -->
-</div>
 
 <!-- Google Analytics -->
 <script>

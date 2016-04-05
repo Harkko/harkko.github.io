@@ -68,8 +68,8 @@ html {
 
 body {
   width: 100%;
-/*  height: 100%;
-  padding: 4%;*/
+  height: 100%;
+  padding: 4%;
 }
 
 
@@ -255,18 +255,8 @@ $sidebar-width: 600px;
 $sidebar-width-big: 960px;
 $sidebar-transition: .8s ease-in-out all;
 
-.site-wrapper {
-  width: 100%;
-  height: 100%;
-}
 
-.site-canvas {
-  width: 100%;
-  height: 100%;
-  padding: 4%;
-}
-
-.site-canvas-inner {
+.main-content {
   /* max-width: 79.86vh; /* kokosivun versio (omakuvalla)= 95vh; on 600px; */ /* TODO: RWD leiskakokeilu. Tämän määrittely ehkä osaksi SVG-objektia. Mites fallback, png on pienempi? */
   max-width: 600px;
   min-width: 200px;
@@ -324,7 +314,7 @@ $sidebar-transition: .8s ease-in-out all;
 }
 
 // Animation to show the about page
-.hide-main .site-canvas-inner,
+.hide-main .main-content,
 .hide-main .about-section, 
 .hide-main .main-toggle {
   // move BOTH pieces of content left the same amount
@@ -332,7 +322,7 @@ $sidebar-transition: .8s ease-in-out all;
   transition: $sidebar-transition;
 }
 @media screen and (min-width: 1024px) {
-  .hide-main .site-canvas-inner,
+  .hide-main .main-content,
   .hide-main .about-section,
   .hide-main .main-toggle {
     transform: translateX(-1000px);
