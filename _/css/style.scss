@@ -8,30 +8,45 @@
  * then by component, in order of appearance in the html.
  *
  * General style sections:
- * 1. LAYOUT - overall layout and positioning styles
- * 2. NAVIGATION - <li>-element global styles, link styles & pseudo classes
- * 3. TYPOGRAPHY - text styling and sizing, custom highlight text color
+ * 1. COLORS - SCSS color variables
+ * 2. LAYOUT - overall layout and positioning styles
+ * 3. NAVIGATION - <li>-element global styles, link styles & pseudo classes
+ * 4. TYPOGRAPHY - text styling and sizing, custom highlight text color
  *
  * Sections of code by component, in the order of their appearance:
- * 4. HEADER SVG AVATAR - an SVG self-portrait with a fallback
- * 5. MAIN NAV - <h1>-text navigation
- * 6. SOCIAL MEDIA ICONS - links to my profiles and social media
- * 7. OFF-CANVAS "ABOUT" -SECTION - The "About" section with off-canvas transform
+ * 5. HEADER SVG AVATAR - an SVG self-portrait with a fallback
+ * 6. MAIN NAV - <h1>-text navigation
+ * 7. SOCIAL MEDIA ICONS - links to my profiles and social media
+ * 8. OFF-CANVAS "ABOUT" -SECTION - The "About" section with off-canvas transform
 */
 
 
 /* =========================================================================
-   1. LAYOUT
+   1. COLORS
    ========================================================================= */
 
-/* TODO: to Normalize, add overrides to element margins, paddings etc. from the orig. reset */
-/* Normalize: https://necolas.github.io/normalize.css/; */
-/* @import url("/bower_components/normalize-css/normalize.css"); */
+// Background and element colors
+$color-bg: #fff;
+
+// Type colors
+$color-text: #333; // default text color
+$color-text-link: #595959; // hyperlink text color
+$color-text-hover: #e84343; // text :hover color, ofc
+$color-text-select: #fffa80; // custom text selection
+$color-text-low: #a6a6a6; // text color for the not so important stuff
 
 
-/* Apply a natural box layout model to all elements; Slightly better version from:
-https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-*/
+/* =========================================================================
+   2. LAYOUT
+   ========================================================================= */
+
+// TODO: to Normalize, add overrides to element margins, paddings etc. from the orig. reset
+// Normalize: https://necolas.github.io/normalize.css/;
+// @import url("/bower_components/normalize-css/normalize.css");
+
+
+// Apply a natural box layout model to all elements; Slightly better version from:
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html {
   box-sizing: border-box;
 }
@@ -48,16 +63,18 @@ html {
 
 html {
   font-size: 16px;
-  background-color: #fff;
+  background-color: $color-bg;
 }
 
 body {
   width: 100%;
+/*  height: 100%;
+  padding: 4%;*/
 }
 
 
 /* =========================================================================
-   2. NAVIGATION
+   3. NAVIGATION
    ========================================================================= */
 
 /* ===== Main nav styles ===== */
@@ -69,18 +86,18 @@ li {
 /* ===== Link styles ===== */
 
 a {
-  color: #595959;
+  color: $color-text-link;
   text-decoration: none;
 }
 
 a:hover {
-  color: #e84343; 
+  color: $color-text-hover; 
   transition: all 0.3s ease-out;
 }
 
 
 /* =========================================================================
-   3. TYPOGRAPHY
+   4. TYPOGRAPHY
    ========================================================================= */
 
 /* ===== Primary type styling ===== */
@@ -99,21 +116,21 @@ a:hover {
 body {
   font-family: "BebasNeue", Helmet, Freesans, sans-serif;
   font-size: 1.6em;
-  color: #333;
+  color: $color-text;
   text-align: center;
   text-transform: uppercase; 
 }
 
 h1 {
-  /* needed for FitText.js */
+  // needed for FitText.js
   display: inline-block;
   width: 100%;
   text-align: center;
   text-indent: -.1em;
-  /* (end) needed for FitText.js*/
+  // (end) needed for FitText.js
 
-  font-size: 4.06em; /* 104px */
-  line-height: .9; /* 89px */
+  font-size: 4.06em; // 104px
+  line-height: .9; // 89px
 }
 
 h2 {
@@ -122,8 +139,8 @@ h2 {
   text-align: center;
   text-indent: -.1em;
 
-  font-size: 3.71em; /* 95px */
-  line-height: 1; /* 80px */
+  font-size: 3.71em; // 95px
+  line-height: 1; // 80px
 }
 
 h3 {
@@ -132,34 +149,34 @@ h3 {
   text-align: center;
   text-indent: -.1em;
 
-  font-size: 2.61em; /* 67px */
-  line-height: 1; /* 63px */
+  font-size: 2.61em; // 67px
+  line-height: 1; // 63px
 }
 
 /* ===== Custom text-selection colors ===== */
 
 ::selection {
   text-shadow: none;
-  background-color: #fffa80;
+  background-color: $color-text-select;
 }
 
 
 /* =========================================================================
-   4. HEADER SVG AVATAR
+   5. HEADER SVG AVATAR
    ========================================================================= */
 
-/* Div that holds the svg data <object> */
+// Div that holds the svg data <object>
 .svg-container {
   position: relative;
   display: inline-block;
-  width: 100%; /* needed to draw the svg */
+  width: 100%; // needed to draw the svg
   padding-bottom: 100%;
   margin-bottom: 20px;
   overflow: hidden;
   vertical-align: middle;
 }
 
-/* svg data <object> */
+// svg data <object>
 #avatar {
   position: absolute;
   top: 0;
@@ -167,10 +184,10 @@ h3 {
   display: inline-block;
 }
 
-/* png fallback of the svg header img*/
+// png fallback of the svg header img
 #avatar div {
   display: block;
-  height: auto; /* 600px; */
+  height: auto; // 600px; //
   max-width: 100%;
   margin-bottom: 20px;
   background: center center no-repeat;
@@ -180,7 +197,7 @@ h3 {
 
 
 /* =========================================================================
-   5. MAIN TEXT-NAVIGATION
+   6. MAIN TEXT-NAVIGATION
    ========================================================================= */
 
 .main-nav {
@@ -193,7 +210,7 @@ h3 {
 
 
 /* =========================================================================
-   6. SOCIAL MEDIA ICONS
+   7. SOCIAL MEDIA ICONS
    ========================================================================= */
 
 .some-nav {
@@ -203,22 +220,22 @@ h3 {
 .some-links {
   padding-top: 10px;
 }
-/* Hide the hyperlinked text under the icons */
+// Hide the hyperlinked text under the icons
 .some-links li a {
   opacity: 0;
 }
 
-/* TODO: could the icons themselves work as links? */
+// TODO: could the icons themselves work as links?
 .icon {
   display: inline-block;
-  width: 51px; /* original png size 38px */
-  height: 51px; /* TODO: Seems like this only sizes the container, not the icons. Could removing the width and height values from the icon svgs work? */
+  width: 51px; // original png size 38px
+  height: 51px; // TODO: Seems like this only sizes the container, not the icons. Could removing the width and height values from the icon svgs work?
   margin-left: 15px;
   overflow: hidden;
   background-repeat: no-repeat;
   transform: scale(1);
   transition: background-color .2s ease-out, transform .2s ease-out;
-  /* transition: all 300ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+  // Fancier transition? => transition: all 300ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
 }
 
 .icon:hover, .icon:focus, .icon:active { 
@@ -228,11 +245,15 @@ h3 {
 
 
 /* =========================================================================
-   7. OFF-CANVAS "ABOUT" -SECTION
+   8. OFF-CANVAS "ABOUT" -SECTION
    ========================================================================= */
 
-/* TODO: 1) reduce DOM complexity, 3 levels really needed? 
- * 2) Media queries to viewports over 620px -> translateX(-1000px);? */
+// TODO: reduce DOM complexity, 3 levels really needed? 
+
+// Unit variables for about-section
+$sidebar-width: 600px;
+$sidebar-width-big: 960px;
+$sidebar-transition: .8s ease-in-out all;
 
 .site-wrapper {
   width: 100%;
@@ -249,61 +270,73 @@ h3 {
   /* max-width: 79.86vh; /* kokosivun versio (omakuvalla)= 95vh; on 600px; */ /* TODO: RWD leiskakokeilu. Tämän määrittely ehkä osaksi SVG-objektia. Mites fallback, png on pienempi? */
   max-width: 600px;
   min-width: 200px;
-  min-height: 100%; /* "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
+  min-height: 100%; // "because in browsers other than Internet Explorer, content that is longer than the fixed height of an element just spills over the edge."? */
   overflow: hidden;
-  margin: 0px auto; /* centers the content */
-  transition: .8s ease-in-out all; /* needed, otherwise no anim on close */
+  margin: 0px auto; // centers the content
+  transition: $sidebar-transition; // needed, otherwise no anim on close
 }
 
 /* Reduce main content opacity when about section revealed */
 .opacity-main {
   opacity: 0.4;
-  transition: .8s ease-in-out all; 
+  transition: $sidebar-transition; 
 }
 
 /* ===== About-section layout ===== */
 
-/* toggle to go back to main content layout */
+// TODO: how to change the variable content screen size changes to "big"
+@media screen and (min-width: 1024px) {
+  $sidebar-width: $sidebar-width-big;
+}
+
+// toggle to go back to main content layout
 .main-toggle {
   position: fixed;
   top: 0;
   width: 100%;
   height: 0%;
-  transition: .8s ease-in-out all;
+  transition: $sidebar-transition;
 }
 
-/* Bring the pusher to top when about section is revealed */
+// Bring the toggle-wrapper to top when about section is revealed
 .main-toggle-enable {
   height: 100%;
 }
 
 .about-section {
   top: 0;
-  right: -600px; /* position it JUST outside the right edge of the screen */
-  width: 600px;
+  right: -$sidebar-width; // position it JUST outside the right edge of the screen
+  width: $sidebar-width;
   height: 100%;
-  min-width: initial; /* this is just an override for above styles */
-  max-width: 100%; /* needed for section to scale nicely on smaller screens */
+  min-width: initial; // this is just an override for above styles
+  max-width: 100%; // needed for section to scale nicely on smaller screens
   
-  /* position the sidebar fixed to the SCREEN, not the parent (for scroll position independence) */
+  // position the sidebar fixed to the SCREEN, not the parent (for scroll position independence)
   position: fixed;
   
-  /* if there's more stuff in "about", make sure it scrolls independently */
+  // if there's more stuff in "about", make sure it scrolls independently
   overflow: auto;
   
   padding: 0 4%;
 
-  /* this is how the aside section moves */
-  transition: .8s ease-in-out all;
+  // this is how the aside section moves
+  transition: $sidebar-transition;
 }
 
-/* Animation to show the about page */
+// Animation to show the about page
 .hide-main .site-canvas-inner,
 .hide-main .about-section, 
 .hide-main .main-toggle {
-  /* move BOTH pieces of content left the same amount */
-  transform: translateX(-600px);
-  transition: .8s ease-in-out all;
+  // move BOTH pieces of content left the same amount
+  transform: translateX(-$sidebar-width);
+  transition: $sidebar-transition;
+}
+@media screen and (min-width: 1024px) {
+  .hide-main .site-canvas-inner,
+  .hide-main .about-section,
+  .hide-main .main-toggle {
+    transform: translateX(-1000px);
+  }
 }
 
 /* ===== "About"-section content styling ===== */
@@ -313,7 +346,7 @@ h3 {
   margin: 20px 0px;
 }
 
-/* Back-button */
+// Back-button
 #about-back-btn {
   float: left;
   padding: 1.4em 0 .8em;
@@ -325,10 +358,10 @@ h3 {
   font-size: 1.2rem;
   line-height: 1.2;
   text-transform: initial;
-  color: #a6a6a6;
+  color: $color-text-low;
 }
 #about-back-btn:hover {
-  color: #e84343;
+  color: $color-text-hover;
   transition: all 0.3s ease-out;
 }
 #about-back-btn:focus {
@@ -385,5 +418,5 @@ h3 {
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
-    /* Retina-specific stuff here */
+    // Retina-specific stuff here
 }
