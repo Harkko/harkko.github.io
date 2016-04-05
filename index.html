@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
 
-  <title>Graphic Designer Hannu Aarniala</title>
+  <title>Designer Hannu Aarniala</title>
 
   <meta name="title" content="Graphic Designer Hannu Aarniala" />
   <meta name="description" content="Personal site and the work of a Helsinki based graphic designer Hannu Aarniala"/>
@@ -25,6 +25,9 @@
   <!-- Opera Speed Dial icon -->
   <link rel="icon" type"image/png" href="_/img/195x195image.png" />
   
+  <!-- Webfonts from Brick.im -->
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Montserrat:300,500">
+
   <link rel="stylesheet" href="_/css/reset.css" />
   <link rel="stylesheet" href="_/css/style.css" />
 
@@ -44,6 +47,9 @@
   <meta property="og:image" content="/apple-touch-icon-precomposed.png"/>
   <meta property="og:site_name" content="Graphic designer Hannu Aarniala"/>
 
+  <!-- Include jQuery via Google's hosted library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
   <!-- Social media icons with Grunticon -->
   <script>
   /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -54,10 +60,13 @@
 </head>
 
 <body>
+<!-- body acts as a "wrapper" for the main content VS off-canvas "About"-page -->
+
+<div role="main" class="main-content">
 
   <header id="header">
     
-    <div class="svg-container">
+    <div class="svg-container"> 
       <object height="100%" width="100%" id="avatar" type="image/svg+xml" data="_/img/avatar.svg">
         <!-- fallback image in this div by CSS -->
         <div></div>
@@ -66,14 +75,14 @@
 
   <!-- Header text and nav links section -->
     <h1 id="h1-name">Hannu Aarniala</h1>
-    <h2 id="h2-title">graphic designer</h2>
+    <h2 id="h2-title">visual designer</h2>
 
     <nav>
       <h3 id="h3-nav">
         <ul class="main-nav">
           <li><a href="http://cargocollective.com/hannu">Work</a></li>|
-          <li><a href="http://cargocollective.com/hannu/About">About</a></li>|
-          <li><a href="mailto:hannu@hannuaarniala.com">Contact</a></li>
+          <li><a href="mailto:hannu@hannuaarniala.com">Contact</a></li>|
+          <li><a href="javascript:void(0)" class="toggle-about">About</a></li>
         </ul>
       </h3>
     </nav>
@@ -81,7 +90,7 @@
   </header>
 
   <!-- social media icons nav-buttons -->
-  <section class="some-nav">
+  <div class="some-nav">
     <ul class="some-links">
       <li class="icon icon-twitter"><a href="https://twitter.com/haarniala" title="Twitter">Twitter</a></li>
       <li class="icon icon-dribbble"><a href="https://dribbble.com/har" title="Dribbble">dribbble</a></li>
@@ -92,7 +101,25 @@
       <li class="icon icon-lastfm"><a href="http://www.last.fm/user/Harkko" title="Last.fm">last.fm</a></li>
       <li class="icon icon-gimmebar"><a href="https://gimmebar.com/loves/har" title="Gimmebar">gimmebar</a></li>
     </ul>
-  </section>
+  </div>
+
+<!-- .main-content end -->
+</div>
+
+<!-- toggle to reveal/hide main content -->
+<div class="main-toggle"></div>
+
+<!-- hidden "About" page content-->
+<aside role="sidebar" class="about-section">
+    <button id="about-back-btn">&#11013; Back</button>
+    <h1 id="h1-about">At Your Service,</h1>
+    <img sizes="(min-width: 320px) 50vw, 100vw" srcset="_/img/Hannu-600-retina.jpg 2x"
+         src="_/img/Hannu-600.jpg" width="600" alt="Hannu Aarniala" />
+
+    <p>A visual design thinker and a problem solver with an extensive experience in print and a passion for great digital products & experiences. I’m a team player who likes to think different and make stuff work with less.</p>
+    <p><a href="http://youtu.be/EZNInn5jFRE">I dance</a> the Lindy Hop, suffer from <a href="https://en.wikipedia.org/wiki/Tsundoku">tsundoku</a>, <a href="https://open.spotify.com/user/harkko/playlist/65ZPgCSYvCme2P54FRj4Ut">DJ</a> occasionally, <a href="http://www.last.fm/user/Harkko">listen to</a> a lot of music and try to be The World's Greatest Dad.</p>
+  </aside>
+
 
 <!-- Google Analytics -->
 <script>
@@ -105,13 +132,17 @@
   ga('send', 'pageview');
 </script>
 
-  <!-- Fitting text to the body device-agnostically with FitText.js -->
-  <script src="_/js/fittext.js"></script>
-  <script type="text/javascript">
-    fitText(document.getElementById('h1-name'), 0.545)
-    fitText(document.getElementById('h2-title'), 0.59)
-    fitText(document.getElementById('h3-nav'), 0.84)
-  </script>
+<!-- Fitting text to the viewport device-agnostically with FitText.js -->
+<script src="_/js/fittext.js"></script>
+<script type="text/javascript">
+  fitText(document.getElementById('h1-name'), .545)
+  fitText(document.getElementById('h2-title'), .545)
+  fitText(document.getElementById('h3-nav'), .84)
+  fitText(document.getElementById('h1-about'), .6)
+</script>
+
+<!-- off-canvas 'About'-page functionality -->
+<script src="_/js/off-canvas-effects.js"></script>
 
 </body>
 
