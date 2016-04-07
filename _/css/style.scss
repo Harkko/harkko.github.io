@@ -274,10 +274,15 @@ $sidebar-transition: .8s ease-in-out all;
 
 /* ===== About-section layout ===== */
 
-// TODO: how to change the variable content screen size changes to "big". NOTE: can't work here, because PREprocessing
-@media screen and (min-width: 1024px) {
+// TODO: how to change the variable content screen size changes to "big". 
+// NOTE: can't work here, because PREprocessing
+/* @media screen and (min-width: 1024px) {
   $sidebar-width: $sidebar-width-big;
-}
+} */
+
+// TODO add media-queries as mixins. Based on:
+// https://css-tricks.com/approaches-media-queries-sass/
+// AND https://css-tricks.com/naming-media-queries/
 
 // toggle to go back to main content layout
 .main-toggle {
@@ -297,6 +302,7 @@ $sidebar-transition: .8s ease-in-out all;
   top: 0;
   right: -$sidebar-width; // position it JUST outside the right edge of the screen
   width: $sidebar-width;
+  // TODO: add media queries wherever $sidebar-width for the bigger screens.
   height: 100%;
   min-width: initial; // this is just an override for above styles
   max-width: 100%; // needed for section to scale nicely on smaller screens
