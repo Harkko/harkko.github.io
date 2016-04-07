@@ -274,7 +274,7 @@ $sidebar-transition: .8s ease-in-out all;
 
 /* ===== About-section layout ===== */
 
-// TODO: how to change the variable content screen size changes to "big"
+// TODO: how to change the variable content screen size changes to "big". NOTE: can't work here, because PREprocessing
 @media screen and (min-width: 1024px) {
   $sidebar-width: $sidebar-width-big;
 }
@@ -319,6 +319,10 @@ $sidebar-transition: .8s ease-in-out all;
 .hide-main .main-toggle {
   // move BOTH pieces of content left the same amount
   transform: translateX(-$sidebar-width);
+  // Eino's tip to make the sidebar content change responsively
+  @media screen and (min-width: 1024px) {
+    transform: translateX(-$sidebar-width-big);
+  }
   transition: $sidebar-transition;
 }
 @media screen and (min-width: 1024px) {
