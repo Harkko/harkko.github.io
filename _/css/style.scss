@@ -323,7 +323,7 @@ $sidebar-transition: .8s ease-in-out all;
 .hide-main .main-content,
 .hide-main .about-section, 
 .hide-main .main-toggle {
-  // move BOTH pieces of content left the same amount
+  // move BOTH pieces of content left the same amount. TODO: add media query like below?
   transform: translateX(-$sidebar-width);
   // Eino's tip to make the sidebar content change responsively
   @media screen and (min-width: 1024px) {
